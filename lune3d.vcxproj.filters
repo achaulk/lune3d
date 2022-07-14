@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{fab65c8c-183f-42cd-88a9-df4101f382b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sys">
+      <UniqueIdentifier>{1a87f16a-d29d-46e3-8a35-adac0cfdc7cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lua">
+      <UniqueIdentifier>{b26d25ac-973a-42ef-8d89-d9dcee050471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gfx">
+      <UniqueIdentifier>{cbd38f74-187d-4702-adff-12a71075be10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\logging">
+      <UniqueIdentifier>{40322d84-8500-467b-8af3-b53617a50569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\io">
+      <UniqueIdentifier>{cc759d13-4336-4515-8179-4904c3b2ad66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\third_party">
+      <UniqueIdentifier>{9d2dbf9e-f754-4077-a479-5da3c73980b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\third_party\vkbootstrap">
+      <UniqueIdentifier>{230430ab-f8ee-4d5f-87f4-8f9a771a66bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\third_party\zstd">
+      <UniqueIdentifier>{193e2020-5858-4583-822a-924903d56fb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\util">
+      <UniqueIdentifier>{f5776b82-f639-47c3-a937-967a41fd90f8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\lune.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sys\except_win32.cc">
+      <Filter>src\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua\luabuiltin.cc">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sys\thread.cc">
+      <Filter>src\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sys\thread_win32.cc">
+      <Filter>src\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\logging_win32.cc">
+      <Filter>src\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\trace_chromium_json.cc">
+      <Filter>src\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\trace_collector.cc">
+      <Filter>src\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\trace_file_sink.cc">
+      <Filter>src\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\trace_processor.cc">
+      <Filter>src\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\tracing.cc">
+      <Filter>src\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\logging.cc">
+      <Filter>src\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\io\file_win32.cc">
+      <Filter>src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\io\file.cc">
+      <Filter>src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\io\aio.cc">
+      <Filter>src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sys\sync.cc">
+      <Filter>src\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\io\lua_file.cc">
+      <Filter>src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfx\window_win32.cc">
+      <Filter>src\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfx\vk_mem_alloc.cc">
+      <Filter>src\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfx\gfx.cc">
+      <Filter>src\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfx\texture.cc">
+      <Filter>src\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfx\memory.cc">
+      <Filter>src\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfx\device.cc">
+      <Filter>src\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\VkBootstrap\VkBootstrap.cc">
+      <Filter>src\third_party\vkbootstrap</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfx\viewport_win32.cc">
+      <Filter>src\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua\channel.cc">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="src\worker.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfx\viewport.cc">
+      <Filter>src\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\decompress\zstd_decompress.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\decompress\zstd_decompress_block.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\decompress\huf_decompress.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\decompress\zstd_ddict.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\dictBuilder\divsufsort.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\dictBuilder\fastcover.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\dictBuilder\zdict.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\dictBuilder\cover.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\common\entropy_common.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\common\error_private.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\common\fse_decompress.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\common\pool.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\common\threading.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\common\xxhash.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\common\zstd_common.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_compress_literals.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_compress_sequences.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_compress_superblock.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_double_fast.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_fast.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_lazy.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_ldm.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_opt.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstdmt_compress.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\fse_compress.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\hist.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\huf_compress.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_compress.c">
+      <Filter>src\third_party\zstd</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfx\shader.cc">
+      <Filter>src\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfx\framegraph.cc">
+      <Filter>src\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lua\luaobject.cc">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\cvar.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sys\clock_win32.cc">
+      <Filter>src\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\compress_zstd.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\compress.cc">
+      <Filter>src\util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\lune.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sys\except.h">
+      <Filter>src\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua\lua.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua\luabuiltin.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sys\thread.h">
+      <Filter>src\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\frame.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logging.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logging\logging.h">
+      <Filter>src\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logging\trace_chromium_json.h">
+      <Filter>src\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logging\trace_collector.h">
+      <Filter>src\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logging\trace_file_sink.h">
+      <Filter>src\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logging\trace_processor.h">
+      <Filter>src\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\file.h">
+      <Filter>src\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\aio.h">
+      <Filter>src\io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sys\sync.h">
+      <Filter>src\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clock.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\blob.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\window.h">
+      <Filter>src\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\gfx.h">
+      <Filter>src\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\vk_mem_alloc.h">
+      <Filter>src\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\types.h">
+      <Filter>src\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\refptr.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\texture.h">
+      <Filter>src\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\memory.h">
+      <Filter>src\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\device.h">
+      <Filter>src\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\VkBootstrap\VkBootstrap.h">
+      <Filter>src\third_party\vkbootstrap</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\viewport.h">
+      <Filter>src\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\camera.h">
+      <Filter>src\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua\channel.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="src\worker.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\decompress\zstd_ddict.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\decompress\zstd_decompress_block.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\decompress\zstd_decompress_internal.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\dictBuilder\cover.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\dictBuilder\divsufsort.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\compiler.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\cpu.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\error_private.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\fse.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\huf.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\mem.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\pool.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\portability_macros.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\threading.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\xxhash.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\zstd_deps.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\zstd_internal.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\zstd_trace.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\bits.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\common\bitstream.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_compress_internal.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_compress_literals.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_compress_sequences.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_compress_superblock.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_cwksp.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_double_fast.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_fast.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_lazy.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_ldm.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_ldm_geartab.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_opt.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstdmt_compress.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\clevels.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\compress\hist.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\zstd.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\zstd_errors.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\third_party\zstd\lib\zdict.h">
+      <Filter>src\third_party\zstd</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\shader.h">
+      <Filter>src\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\framegraph.h">
+      <Filter>src\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua\luaobject.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\cvar.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua\luafunctor.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\compress.h">
+      <Filter>src\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,18 @@
+[submodule "third_party/LuaJIT"]
+	path = src/third_party/LuaJIT
+	url = git@github.com:achaulk/LuaJIT.git
+[submodule "src/third_party/glm"]
+	path = src/third_party/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "src/third_party/PhysX"]
+	path = src/third_party/PhysX
+	url = https://github.com/NVIDIAGameWorks/PhysX.git
+[submodule "src/third_party/optick"]
+	path = src/third_party/optick
+	url = https://github.com/bombomby/optick.git
+[submodule "src/third_party/zstd"]
+	path = src/third_party/zstd
+	url = https://github.com/facebook/zstd.git
+[submodule "src/third_party/freetype"]
+	path = src/third_party/freetype
+	url = https://github.com/freetype/freetype.git

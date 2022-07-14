@@ -1,0 +1,60 @@
+BasedOnStyle: Microsoft
+
+Language: Cpp
+IndentWidth: 4
+TabWidth: 4
+UseTab: ForIndentation
+Standard: Latest
+ColumnLimit: 120
+
+DerivePointerAlignment: false
+PointerAlignment: Right
+
+Cpp11BracedListStyle: true
+AccessModifierOffset: -4
+AlignAfterOpenBracket: DontAlign
+
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+
+FixNamespaceComments: true
+NamespaceIndentation: None
+
+AlwaysBreakTemplateDeclarations: Yes
+AllowShortLoopsOnASingleLine: true
+
+AlignEscapedNewlines: Left
+
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: Never
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: false
+AlwaysBreakAfterReturnType: None
+
+AllowShortBlocksOnASingleLine: Empty
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterEnum: true
+  AfterStruct: true
+  AfterClass: true
+  AfterFunction: true
+  AfterNamespace: false
+  AfterUnion: true
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  AfterControlStatement: false
+
+
+PenaltyReturnTypeOnItsOwnLine: 25

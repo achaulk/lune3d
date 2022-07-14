@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{dc4c4b79-c321-4cee-839b-0d09dcb33540}</ProjectGuid>
+    <RootNamespace>lune3d</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <VcpkgManifestInstall>false</VcpkgManifestInstall>
+    <VcpkgAutoLink>false</VcpkgAutoLink>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:tlsGuards- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>src;%VULKAN_SDK%\Include</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>lua51-mod.lib;vulkan-1.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>src/third_party/LuaJIT/src;%VULKAN_SDK%/Lib</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:tlsGuards- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>src;%VULKAN_SDK%\Include</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>lua51-mod.lib;vulkan-1.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>src/third_party/LuaJIT/src;%VULKAN_SDK%/Lib</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:tlsGuards- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>src;%VULKAN_SDK%\Include</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>lua51-mod.lib;vulkan-1.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>src/third_party/LuaJIT/src;%VULKAN_SDK%/Lib</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:tlsGuards- %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>src;%VULKAN_SDK%\Include</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>lua51-mod.lib;vulkan-1.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>src/third_party/LuaJIT/src;%VULKAN_SDK%/Lib</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\engine.cc" />
+    <ClCompile Include="src\gfx\device.cc" />
+    <ClCompile Include="src\gfx\framegraph.cc" />
+    <ClCompile Include="src\gfx\gfx.cc" />
+    <ClCompile Include="src\gfx\memory.cc" />
+    <ClCompile Include="src\gfx\shader.cc" />
+    <ClCompile Include="src\gfx\texture.cc" />
+    <ClCompile Include="src\gfx\viewport.cc" />
+    <ClCompile Include="src\gfx\viewport_win32.cc" />
+    <ClCompile Include="src\gfx\vk_mem_alloc.cc" />
+    <ClCompile Include="src\gfx\window_win32.cc" />
+    <ClCompile Include="src\io\aio.cc" />
+    <ClCompile Include="src\io\file.cc" />
+    <ClCompile Include="src\io\file_win32.cc" />
+    <ClCompile Include="src\io\lua_file.cc" />
+    <ClCompile Include="src\logging\logging.cc" />
+    <ClCompile Include="src\logging\logging_win32.cc" />
+    <ClCompile Include="src\logging\trace_chromium_json.cc" />
+    <ClCompile Include="src\logging\trace_collector.cc" />
+    <ClCompile Include="src\logging\trace_file_sink.cc" />
+    <ClCompile Include="src\logging\trace_processor.cc" />
+    <ClCompile Include="src\logging\tracing.cc" />
+    <ClCompile Include="src\lua\channel.cc" />
+    <ClCompile Include="src\lua\luabuiltin.cc" />
+    <ClCompile Include="src\lua\luaobject.cc" />
+    <ClCompile Include="src\lune.cc" />
+    <ClCompile Include="src\sys\clock_win32.cc" />
+    <ClCompile Include="src\sys\except_win32.cc" />
+    <ClCompile Include="src\sys\sync.cc" />
+    <ClCompile Include="src\sys\thread.cc" />
+    <ClCompile Include="src\sys\thread_win32.cc" />
+    <ClCompile Include="src\third_party\VkBootstrap\VkBootstrap.cc" />
+    <ClCompile Include="src\third_party\zstd\lib\common\entropy_common.c" />
+    <ClCompile Include="src\third_party\zstd\lib\common\error_private.c" />
+    <ClCompile Include="src\third_party\zstd\lib\common\fse_decompress.c" />
+    <ClCompile Include="src\third_party\zstd\lib\common\pool.c" />
+    <ClCompile Include="src\third_party\zstd\lib\common\threading.c" />
+    <ClCompile Include="src\third_party\zstd\lib\common\xxhash.c" />
+    <ClCompile Include="src\third_party\zstd\lib\common\zstd_common.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\fse_compress.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\hist.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\huf_compress.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstdmt_compress.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_compress.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_compress_literals.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_compress_sequences.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_compress_superblock.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_double_fast.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_fast.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_lazy.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_ldm.c" />
+    <ClCompile Include="src\third_party\zstd\lib\compress\zstd_opt.c" />
+    <ClCompile Include="src\third_party\zstd\lib\decompress\huf_decompress.c" />
+    <ClCompile Include="src\third_party\zstd\lib\decompress\zstd_ddict.c" />
+    <ClCompile Include="src\third_party\zstd\lib\decompress\zstd_decompress.c" />
+    <ClCompile Include="src\third_party\zstd\lib\decompress\zstd_decompress_block.c" />
+    <ClCompile Include="src\third_party\zstd\lib\dictBuilder\cover.c" />
+    <ClCompile Include="src\third_party\zstd\lib\dictBuilder\divsufsort.c" />
+    <ClCompile Include="src\third_party\zstd\lib\dictBuilder\fastcover.c" />
+    <ClCompile Include="src\third_party\zstd\lib\dictBuilder\zdict.c" />
+    <ClCompile Include="src\util\compress.cc" />
+    <ClCompile Include="src\util\compress_zstd.cc" />
+    <ClCompile Include="src\util\cvar.cc" />
+    <ClCompile Include="src\worker.cc" />
+    <ClCompile Include="src\world.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\blob.h" />
+    <ClInclude Include="src\clock.h" />
+    <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\engine.h" />
+    <ClInclude Include="src\event.h" />
+    <ClInclude Include="src\frame.h" />
+    <ClInclude Include="src\gfx\camera.h" />
+    <ClInclude Include="src\gfx\device.h" />
+    <ClInclude Include="src\gfx\framegraph.h" />
+    <ClInclude Include="src\gfx\gfx.h" />
+    <ClInclude Include="src\gfx\memory.h" />
+    <ClInclude Include="src\gfx\shader.h" />
+    <ClInclude Include="src\gfx\texture.h" />
+    <ClInclude Include="src\gfx\types.h" />
+    <ClInclude Include="src\gfx\viewport.h" />
+    <ClInclude Include="src\gfx\vk_mem_alloc.h" />
+    <ClInclude Include="src\gfx\window.h" />
+    <ClInclude Include="src\io\aio.h" />
+    <ClInclude Include="src\io\file.h" />
+    <ClInclude Include="src\logging.h" />
+    <ClInclude Include="src\logging\logging.h" />
+    <ClInclude Include="src\logging\trace_chromium_json.h" />
+    <ClInclude Include="src\logging\trace_collector.h" />
+    <ClInclude Include="src\logging\trace_file_sink.h" />
+    <ClInclude Include="src\logging\trace_processor.h" />
+    <ClInclude Include="src\lua\channel.h" />
+    <ClInclude Include="src\lua\lua.h" />
+    <ClInclude Include="src\lua\luabuiltin.h" />
+    <ClInclude Include="src\lua\luafunctor.h" />
+    <ClInclude Include="src\lua\luaobject.h" />
+    <ClInclude Include="src\lune.h" />
+    <ClInclude Include="src\refptr.h" />
+    <ClInclude Include="src\sys\except.h" />
+    <ClInclude Include="src\sys\sync.h" />
+    <ClInclude Include="src\sys\thread.h" />
+    <ClInclude Include="src\third_party\VkBootstrap\VkBootstrap.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\bits.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\bitstream.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\compiler.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\cpu.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\error_private.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\fse.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\huf.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\mem.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\pool.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\portability_macros.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\threading.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\xxhash.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\zstd_deps.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\zstd_internal.h" />
+    <ClInclude Include="src\third_party\zstd\lib\common\zstd_trace.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\clevels.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\hist.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstdmt_compress.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_compress_internal.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_compress_literals.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_compress_sequences.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_compress_superblock.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_cwksp.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_double_fast.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_fast.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_lazy.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_ldm.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_ldm_geartab.h" />
+    <ClInclude Include="src\third_party\zstd\lib\compress\zstd_opt.h" />
+    <ClInclude Include="src\third_party\zstd\lib\decompress\zstd_ddict.h" />
+    <ClInclude Include="src\third_party\zstd\lib\decompress\zstd_decompress_block.h" />
+    <ClInclude Include="src\third_party\zstd\lib\decompress\zstd_decompress_internal.h" />
+    <ClInclude Include="src\third_party\zstd\lib\dictBuilder\cover.h" />
+    <ClInclude Include="src\third_party\zstd\lib\dictBuilder\divsufsort.h" />
+    <ClInclude Include="src\third_party\zstd\lib\zdict.h" />
+    <ClInclude Include="src\third_party\zstd\lib\zstd.h" />
+    <ClInclude Include="src\third_party\zstd\lib\zstd_errors.h" />
+    <ClInclude Include="src\util\compress.h" />
+    <ClInclude Include="src\util\cvar.h" />
+    <ClInclude Include="src\worker.h" />
+    <ClInclude Include="src\world.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="src\third_party\freetype\builds\windows\vc2010\freetype.vcxproj">
+      <Project>{78b079bd-9fc7-4b9e-b4a6-96da0f00248b}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
